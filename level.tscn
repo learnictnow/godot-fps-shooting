@@ -1,0 +1,153 @@
+[gd_scene load_steps=6 format=3 uid="uid://qs0r7ik67eo1"]
+
+[ext_resource type="PackedScene" uid="uid://bul8r4thaevem" path="res://projectile_rigid_body_3d.tscn" id="1_5c8kd"]
+[ext_resource type="PackedScene" uid="uid://desgg3pb3bfi2" path="res://player.tscn" id="2_i7d2l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bg35a"]
+albedo_color = Color(1, 0.431373, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_h8ola"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ngvrb"]
+
+[node name="Level" type="Node3D"]
+
+[node name="Floor" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(25, 1, 25)
+
+[node name="TargetBody3D" type="RigidBody3D" parent="." groups=["Target"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetBody3D"]
+material_override = SubResource("StandardMaterial3D_bg35a")
+transparency = 0.25
+mesh = SubResource("SphereMesh_h8ola")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBody3D"]
+shape = SubResource("SphereShape3D_ngvrb")
+
+[node name="TargetBody3D2" type="RigidBody3D" parent="." groups=["Target"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetBody3D2"]
+material_override = SubResource("StandardMaterial3D_bg35a")
+transparency = 0.25
+mesh = SubResource("SphereMesh_h8ola")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBody3D2"]
+shape = SubResource("SphereShape3D_ngvrb")
+
+[node name="TargetBody3D3" type="RigidBody3D" parent="." groups=["Target"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 5, -2)
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetBody3D3"]
+material_override = SubResource("StandardMaterial3D_bg35a")
+transparency = 0.25
+mesh = SubResource("SphereMesh_h8ola")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBody3D3"]
+shape = SubResource("SphereShape3D_ngvrb")
+
+[node name="TargetBody3D4" type="RigidBody3D" parent="." groups=["Target"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 5, 3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetBody3D4"]
+material_override = SubResource("StandardMaterial3D_bg35a")
+transparency = 0.25
+mesh = SubResource("SphereMesh_h8ola")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBody3D4"]
+shape = SubResource("SphereShape3D_ngvrb")
+
+[node name="TargetBody3D5" type="RigidBody3D" parent="." groups=["Target"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, 6)
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetBody3D5"]
+material_override = SubResource("StandardMaterial3D_bg35a")
+transparency = 0.25
+mesh = SubResource("SphereMesh_h8ola")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBody3D5"]
+shape = SubResource("SphereShape3D_ngvrb")
+
+[node name="TargetBody3D6" type="RigidBody3D" parent="." groups=["Target"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetBody3D6"]
+material_override = SubResource("StandardMaterial3D_bg35a")
+transparency = 0.25
+mesh = SubResource("SphereMesh_h8ola")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBody3D6"]
+shape = SubResource("SphereShape3D_ngvrb")
+
+[node name="TargetBody3D7" type="RigidBody3D" parent="." groups=["Target"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.6, 12)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetBody3D7"]
+material_override = SubResource("StandardMaterial3D_bg35a")
+transparency = 0.25
+mesh = SubResource("SphereMesh_h8ola")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBody3D7"]
+shape = SubResource("SphereShape3D_ngvrb")
+
+[node name="TargetBody3D8" type="RigidBody3D" parent="." groups=["Target"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1.8, 10)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetBody3D8"]
+material_override = SubResource("StandardMaterial3D_bg35a")
+transparency = 0.25
+mesh = SubResource("SphereMesh_h8ola")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBody3D8"]
+shape = SubResource("SphereShape3D_ngvrb")
+
+[node name="TargetBody3D9" type="RigidBody3D" parent="." groups=["Target"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, 9.4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetBody3D9"]
+material_override = SubResource("StandardMaterial3D_bg35a")
+transparency = 0.25
+mesh = SubResource("SphereMesh_h8ola")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBody3D9"]
+shape = SubResource("SphereShape3D_ngvrb")
+
+[node name="TargetBody3D10" type="RigidBody3D" parent="." groups=["Target"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.6, 2.3, 8.6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetBody3D10"]
+material_override = SubResource("StandardMaterial3D_bg35a")
+transparency = 0.25
+mesh = SubResource("SphereMesh_h8ola")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetBody3D10"]
+shape = SubResource("SphereShape3D_ngvrb")
+
+[node name="ProjectileRigidBody3D" parent="." instance=ExtResource("1_5c8kd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0318928, 0.9417, 10.1976)
+
+[node name="ProjectileRigidBody3D2" parent="." instance=ExtResource("1_5c8kd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96811, 0.9417, 10.1976)
+
+[node name="ProjectileRigidBody3D3" parent="." instance=ExtResource("1_5c8kd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.03189, 0.9417, 10.1976)
+
+[node name="Player" parent="." instance=ExtResource("2_i7d2l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9, 2, 10)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+light_color = Color(0.54902, 1, 1, 1)
+light_energy = 2.616
+omni_range = 11.041
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+light_color = Color(0.988235, 0.886275, 0.396078, 1)
+light_energy = 2.616
+omni_range = 11.041
